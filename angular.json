@@ -123,6 +123,12 @@
               "devServerTarget": "angular-continhas:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options":{
+            "baseHref": "/angular-continhas"
+          }
         }
       }
     }
