@@ -1,1 +1,40 @@
-<p>aritmetica works!</p>
+<form [formGroup]="contaForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>{{title}} <span style="padding-left: 30px;">{{usuario.porc}}% de {{usuario.total}}</span>
+      </mat-card-title>
+      <mat-card-title *ngIf="usuario.o == 0 else divisao">
+        <h2>{{usuario.a}}</h2>
+        <h2>x {{usuario.b}}</h2>
+      </mat-card-title>
+      <ng-template #divisao>
+        <mat-card-title>
+          <h2>{{usuario.a}} |_<u>{{usuario.b}}</u>_</h2>
+        </mat-card-title>
+      </ng-template>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput #resposta maxlength="10" placeholder="Resposta" type="number" formControlName="resposta">
+            <mat-hint align="end">{{resposta.value.length}}</mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row" *ngIf="usuario.o==1">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput #resto maxlength="10" placeholder="Resto da divisão" type="number" formControlName="resto">
+            <mat-hint align="end">{{resto.value.length}}</mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Enviar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
+<mat-card *ngIf="usuario.acertou == 1" [style.color]="'#145623'" [style.backgroundColor]="'#d4edda'">Acertou</mat-card>
+<mat-card *ngIf="usuario.acertou == 0" [style.color]="'#711b23'" [style.backgroundColor]="'#f8d7da'">Errou</mat-card>

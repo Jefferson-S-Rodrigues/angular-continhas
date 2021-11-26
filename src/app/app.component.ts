@@ -9,7 +9,12 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Ajuda Continhas usando Angular e Material UI';
+  title = 'Ajuda Continhas';
+
+
+  cores = ['primary', 'accent', 'warn'];
+  corAritmetica = this.cores[Math.floor(Math.random() * this.cores.length)];
+  corExpNum = this.cores[Math.floor(Math.random() * this.cores.length)];
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)

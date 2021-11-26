@@ -8,6 +8,8 @@ import { MatBadgeModule } from '@angular/material/badge';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [],
@@ -19,7 +21,9 @@ import { MatMenuModule } from '@angular/material/menu';
     MatBadgeModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   imports: [
     CommonModule,
@@ -30,7 +34,9 @@ import { MatMenuModule } from '@angular/material/menu';
     MatBadgeModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }
