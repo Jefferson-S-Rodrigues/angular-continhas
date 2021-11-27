@@ -15,7 +15,7 @@
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span style="padding-left: 20px;">{{ title }}</span>
+      <span [ngStyle]="{'padding-left': '20px'}">{{ title }}</span>
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
