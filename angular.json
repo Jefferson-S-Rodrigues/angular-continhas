@@ -125,10 +125,7 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options":{
-            "baseHref": "/angular-continhas"
-          }
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

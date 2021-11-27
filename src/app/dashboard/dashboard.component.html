@@ -1,6 +1,6 @@
 <div class="grid-container">
   <h1 class="mat-h1">Escolha sua Atividade:</h1>
-  <mat-grid-list cols="3" rowHeight="200px">
+  <mat-grid-list [cols]="(isHandset$ | async) ? 1 : 3" rowHeight="200px">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
       <mat-card class="dashboard-card" routerLink="/{{card.link}}">
         <mat-card-header>
