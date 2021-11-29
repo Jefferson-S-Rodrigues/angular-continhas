@@ -8,7 +8,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ExprNumComponent implements OnInit {
 
-  title = "Aritmética";
+  title = "Expressões Numéricas";
 
   usuario = {
     acertos: 0,
@@ -65,18 +65,18 @@ export class ExprNumComponent implements OnInit {
   proximo() {
     let l = 1;
     let m = 20;
-    let contas = ['+','-','*','+','*'];
+    let contas = [' +',' -',' *',' +',' *'];
     let ff = Math.round(Math.random());
-    let expressao = Math.floor(Math.random() * m + l).toString();
+    let expressao = ' ' + Math.floor(Math.random() * m + l).toString();
     expressao += contas[Math.floor(Math.random() * contas.length)];
-    expressao += Math.floor(Math.random() * m + l).toString();
+    expressao += ' ' + Math.floor(Math.random() * m + l).toString();
     expressao += contas[Math.floor(Math.random() * contas.length)];
-    expressao += Math.floor(Math.random() * m + l).toString();
+    expressao += ' ' + Math.floor(Math.random() * m + l).toString();
     expressao += contas[Math.floor(Math.random() * contas.length)];
-    expressao += Math.floor(Math.random() * m + l).toString();
+    expressao += ' ' + Math.floor(Math.random() * m + l).toString();
     if (ff > 0) {
         expressao += contas[Math.floor(Math.random() * contas.length)];
-        expressao += Math.floor(Math.random() * m + l).toString();
+        expressao += ' ' + Math.floor(Math.random() * m + l).toString();
     }
 
     this.usuario.expr = expressao;

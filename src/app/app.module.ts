@@ -11,13 +11,15 @@ import { MaterialModule } from '../material.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AritmeticaComponent } from './aritmetica/aritmetica.component';
 import { ExprNumComponent } from './expr-num/expr-num.component';
+import { ReplacePipe } from './core/pipe/replace.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     AritmeticaComponent,
-    ExprNumComponent
+    ExprNumComponent,
+    ReplacePipe
   ],
   imports: [
     BrowserModule,
