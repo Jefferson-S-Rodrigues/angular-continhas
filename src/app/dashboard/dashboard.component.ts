@@ -16,9 +16,9 @@ export class DashboardComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Aritmética', cols: 1, rows: 1, content: 'Continhas de &#215; e &#247;' },
-          { title: 'Expressões Numéricas', cols: 1, rows: 1, content: 'Continhas de +, - e &#215;' },
-          { title: 'Animais', cols: 1, rows: 1, content: 'Qual é o animal?' }
+          { title: 'Aritmética', cols: 1, rows: 1, content: 'Continhas de &#215; e &#247;', link: 'aritmetica' },
+          { title: 'Expressões Numéricas', cols: 1, rows: 1, content: 'Continhas de +, - e &#215;', link: 'expressoes-numericas' },
+          { title: 'Animais', cols: 1, rows: 1, content: 'Qual é o animal?', link: 'animais' }
         ];
       }
 
