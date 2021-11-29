@@ -1,0 +1,29 @@
+<form [formGroup]="contaForm" novalidate (ngSubmit)="onSubmit()">
+    <mat-card class="shipping-card">
+      <mat-card-header>
+        <mat-card-title>{{title}} <span [ngStyle]="{'padding-left': '30px'}">{{usuario.porc}}% de {{usuario.total}}</span>
+        </mat-card-title>
+        <mat-card-title>
+          <h2>{{usuario.expr}}</h2>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput #resposta maxlength="10" placeholder="Resposta" type="number" formControlName="resposta">
+              <mat-hint align="end">{{resposta.value.length}}</mat-hint>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit">Enviar</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  <mat-card *ngIf="usuario.acertou == 1" [ngStyle]="{'color': '#145623', 'backgroundColor': '#d4edda'}">Acertou</mat-card>
+  <mat-card *ngIf="usuario.acertou == 0" [ngStyle]="{'color': '#711b23', 'backgroundColor': '#f8d7da'}" >
+    Errou
+    <span [ngStyle]="{'padding-left': '30px'}">Última resposta: {{usuario.uresp}}</span>
+  </mat-card>

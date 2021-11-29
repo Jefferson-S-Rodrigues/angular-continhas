@@ -10,12 +10,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AritmeticaComponent } from './aritmetica/aritmetica.component';
+import { ExprNumComponent } from './expr-num/expr-num.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    AritmeticaComponent
+    AritmeticaComponent,
+    ExprNumComponent
   ],
   imports: [
     BrowserModule,
