@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-animais',
@@ -24,10 +23,7 @@ export class AnimaisComponent implements OnInit {
     porc: 0
   };
 
-  contaForm = this.fb.group({});
-
-  onSubmit() {
-    let resp = this.contaForm.get("resposta")?.value;
+  clickAnimal(resp) {
 
     if (resp == null) {
       return;
@@ -48,8 +44,6 @@ export class AnimaisComponent implements OnInit {
     this.usuario.total++;
 
     this.usuario.porc = Math.floor(this.usuario.acertos / this.usuario.total * 100);
-
-    this.contaForm.reset();
 
     this.proximo();
     
@@ -103,6 +97,6 @@ export class AnimaisComponent implements OnInit {
 
   }
 
-  constructor(private fb: FormBuilder) { }
+  constructor() { }
 
 }
