@@ -8,9 +8,9 @@
     </mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <div class="row" *ngFor="let animal of usuario.cinco; trackBy: trackAnimal">
+    <div class="row" *ngFor="let animal of usuario.cinco">
       <div class="col">
-          <button mat-raised-button #resposta color="primary" type="button" (click)="clickAnimal(animal)">{{animal}}</button>
+          <button class="bt-animal" mat-raised-button color="{{usuario.btCor}}" (click)="clickAnimal(animal)">{{animal}}</button>
       </div>
     </div>
   </mat-card-content>

@@ -9,6 +9,8 @@ export class AnimaisComponent implements OnInit {
 
   lista = new Map<string, string>();
   animais = [];
+  
+  cores = ['primary', 'accent', 'warn'];
 
   title = "Qual é o animal?";
 
@@ -20,7 +22,8 @@ export class AnimaisComponent implements OnInit {
     correto: "",
     uresp: "",
     acertou: -1,
-    porc: 0
+    porc: 0,
+    btCor: "primary"
   };
 
   clickAnimal(resp) {
@@ -47,11 +50,6 @@ export class AnimaisComponent implements OnInit {
 
     this.proximo();
     
-  }
-
-  trackAnimal(i, animal) {
-    console.log(i.toString() + animal);
-    return animal;
   }
 
   ngOnInit(): void {
@@ -94,6 +92,8 @@ export class AnimaisComponent implements OnInit {
     this.usuario.cinco = Array.from(selected);
     this.usuario.correto = this.usuario.cinco[Math.floor(Math.random() * this.usuario.cinco.length)];
     this.usuario.descr = this.lista.get(this.usuario.correto);
+
+    this.usuario.btCor = this.cores[Math.floor(Math.random() * this.cores.length)];
 
   }
 
