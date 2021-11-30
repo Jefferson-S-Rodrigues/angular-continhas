@@ -15,7 +15,6 @@ export class ExprNumComponent implements OnInit {
     total: 0,
     expr: "",
     uresp: 0,
-    uresto: 0,
     acertou: -1,
     porc: 0
   };

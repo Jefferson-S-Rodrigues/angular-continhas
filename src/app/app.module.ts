@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AritmeticaComponent } from './aritmetica/aritmetica.component';
 import { ExprNumComponent } from './expr-num/expr-num.component';
 import { ReplacePipe } from './core/pipe/replace.pipe';
+import { AnimaisComponent } from './animais/animais.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReplacePipe } from './core/pipe/replace.pipe';
     DashboardComponent,
     AritmeticaComponent,
     ExprNumComponent,
-    ReplacePipe
+    ReplacePipe,
+    AnimaisComponent
   ],
   imports: [
     BrowserModule,
