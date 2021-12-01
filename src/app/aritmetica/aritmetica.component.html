@@ -1,7 +1,11 @@
-<form [formGroup]="contaForm" novalidate (ngSubmit)="onSubmit()">
+<form [formGroup]="contaForm" novalidate (ngSubmit)="onSubmit(); resposta.focus()">
   <mat-card class="shipping-card">
     <mat-card-header>
-      <mat-card-title>{{title}} <span [ngStyle]="{'padding-left': '30px'}">{{usuario.porc}}% de {{usuario.total}}</span>
+      <mat-card-title>{{title}}<span [ngStyle]="{
+        'padding-left': '30px',
+        'font-weight': 'bold',
+        'color': (usuario.total > 0) ? ((usuario.porc >= 60) ? '#1a8855' : '#db3444') : '#000'
+      }">{{usuario.porc}}% de {{usuario.total}}</span>
       </mat-card-title>
       <mat-card-title *ngIf="usuario.o == 0 else divisao">
         <h2>{{usuario.a}}</h2>
@@ -17,7 +21,7 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput #resposta maxlength="10" placeholder="Resposta" type="number" formControlName="resposta">
+            <input matInput #resposta maxlength="10" placeholder="Resposta" type="number" formControlName="resposta" autofocus>
             <mat-hint align="end">{{resposta.value.length}}</mat-hint>
           </mat-form-field>
         </div>
