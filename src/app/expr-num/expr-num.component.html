@@ -1,33 +1,27 @@
 <form [formGroup]="contaForm" novalidate (ngSubmit)="onSubmit(); resposta.focus()">
-    <mat-card class="shipping-card">
-      <mat-card-header>
-        <mat-card-title>{{title}} <span [ngStyle]="{
-          'padding-left': '30px',
-          'font-weight': 'bold',
-          'color': (usuario.total > 0) ? ((usuario.porc >= 60) ? '#1a8855' : '#db3444') : '#000'
-        }">{{usuario.porc}}% de {{usuario.total}}</span>
-        </mat-card-title>
-        <mat-card-title>
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>
+        <app-topo [title]="title" [usuario]="usuario"></app-topo>
+        <div>
           <h2>{{usuario.expr | replace: '[*]' : '&#215;'}}</h2>
-        </mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <div class="row">
-          <div class="col">
-            <mat-form-field class="full-width">
-              <input matInput #resposta maxlength="10" placeholder="Resposta" type="number" formControlName="resposta" autofocus>
-              <mat-hint align="end">{{resposta.value.length}}</mat-hint>
-            </mat-form-field>
-          </div>
         </div>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button color="primary" type="submit">Enviar</button>
-      </mat-card-actions>
-    </mat-card>
-  </form>
-  <mat-card *ngIf="usuario.acertou == 1" [ngStyle]="{'color': '#145623', 'backgroundColor': '#d4edda'}">Acertou</mat-card>
-  <mat-card *ngIf="usuario.acertou == 0" [ngStyle]="{'color': '#711b23', 'backgroundColor': '#f8d7da'}" >
-    Errou
-    <span [ngStyle]="{'padding-left': '30px'}">Última resposta: {{usuario.uresp}}</span>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput #resposta maxlength="10" placeholder="Resposta" type="number" formControlName="resposta"
+              autofocus>
+            <mat-hint align="end">{{resposta.value.length}}</mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Enviar</button>
+    </mat-card-actions>
   </mat-card>
+</form>
+<app-rodape [usuario]="usuario" [mensagem]="mensagem"></app-rodape>

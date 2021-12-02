@@ -1,13 +1,7 @@
 <mat-card class="shipping-card">
   <mat-card-header>
-    <mat-card-title>{{title}} <span [ngStyle]="{
-      'padding-left': '30px',
-      'font-weight': 'bold',
-      'color': (usuario.total > 0) ? ((usuario.porc >= 60) ? '#1a8855' : '#db3444') : '#000'
-    }">{{usuario.porc}}% de
-        {{usuario.total}}</span>
-    </mat-card-title>
     <mat-card-title>
+    <app-topo [title]="title" [usuario]="usuario"></app-topo>
       <h1>{{usuario.descr}}</h1>
     </mat-card-title>
   </mat-card-header>
@@ -20,5 +14,4 @@
   </mat-card-content>
 </mat-card>
 
-<mat-card *ngIf="usuario.acertou == 1" [ngStyle]="{'color': '#145623', 'backgroundColor': '#d4edda'}">Acertou</mat-card>
-<mat-card *ngIf="usuario.acertou == 0" [ngStyle]="{'color': '#711b23', 'backgroundColor': '#f8d7da'}">Errou</mat-card>
+<app-rodape [usuario]="usuario"></app-rodape>

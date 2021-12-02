@@ -13,6 +13,8 @@ import { AritmeticaComponent } from './aritmetica/aritmetica.component';
 import { ExprNumComponent } from './expr-num/expr-num.component';
 import { ReplacePipe } from './core/pipe/replace.pipe';
 import { AnimaisComponent } from './animais/animais.component';
+import { TopoComponent } from './shared/components/topo/topo.component';
+import { RodapeComponent } from './shared/components/rodape/rodape.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AnimaisComponent } from './animais/animais.component';
     AritmeticaComponent,
     ExprNumComponent,
     ReplacePipe,
-    AnimaisComponent
+    AnimaisComponent,
+    TopoComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule,

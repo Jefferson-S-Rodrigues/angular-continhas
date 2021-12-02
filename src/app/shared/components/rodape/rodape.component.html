@@ -1,0 +1,5 @@
+<mat-card *ngIf="usuario.acertou == 1" [ngStyle]="{'color': '#145623', 'backgroundColor': '#d4edda'}">Acertou</mat-card>
+<mat-card *ngIf="usuario.acertou == 0" [ngStyle]="{'color': '#711b23', 'backgroundColor': '#f8d7da'}">
+  Errou
+  <span class="msg-feedback" *ngIf="mensagem"> {{mensagem}} </span>
+</mat-card>

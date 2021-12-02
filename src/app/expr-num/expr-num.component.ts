@@ -19,6 +19,8 @@ export class ExprNumComponent implements OnInit {
     porc: 0
   };
 
+  mensagem = "";
+
   contaForm = this.fb.group({
     resposta: [null, Validators.compose([
       Validators.required, Validators.minLength(1), Validators.maxLength(10)])
@@ -35,6 +37,8 @@ export class ExprNumComponent implements OnInit {
     let acert: boolean;
 
     this.usuario.uresp = resp;
+
+    this.mensagem = `Última resposta: ${this.usuario.uresp}`;
 
     let respEsp = eval(this.usuario.expr.replace(/[^0-9!*+-]+/g, ""));
 

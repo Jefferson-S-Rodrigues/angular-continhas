@@ -23,6 +23,8 @@ export class AritmeticaComponent implements OnInit {
     porc: 0
   };
 
+  mensagem = "";
+
   contaForm = this.fb.group({
     resposta: [null, Validators.compose([
       Validators.required, Validators.minLength(1), Validators.maxLength(10)])
@@ -45,6 +47,8 @@ export class AritmeticaComponent implements OnInit {
     this.usuario.uresp = resp;
     this.usuario.uresto = rest;
     this.usuario.uo = this.usuario.o;
+
+    this.mensagem = `Última resposta: ${this.usuario.uresp}${this.usuario.uo == 1 ? '; ' + this.usuario.uresto : ''}`;
 
     if (this.usuario.o == 0) {
       acert = resp == (this.usuario.a * this.usuario.b);
