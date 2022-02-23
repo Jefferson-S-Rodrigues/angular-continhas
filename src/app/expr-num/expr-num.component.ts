@@ -16,7 +16,8 @@ export class ExprNumComponent implements OnInit {
     expr: "",
     uresp: 0,
     acertou: -1,
-    porc: 0
+    porc: 0,
+    seg: false
   };
 
   mensagem = "";
@@ -45,6 +46,7 @@ export class ExprNumComponent implements OnInit {
     acert = resp == respEsp;
 
     this.usuario.acertou = acert ? 1 : 0;
+    this.usuario.seg = (!acert) && (!this.usuario.seg);
 
     if (acert) {
       this.usuario.acertos++;
@@ -56,7 +58,9 @@ export class ExprNumComponent implements OnInit {
 
     this.contaForm.reset();
 
-    this.proximo();
+    if (!this.usuario.seg) {
+      this.proximo();
+    }
     
   }
 
