@@ -9,5 +9,6 @@ export class RodapeComponent {
 
   @Input() usuario;
   @Input() mensagem;
+  @Input() segunda;
 
 }

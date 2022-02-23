@@ -19,3 +19,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+# TODO
+
+* Second chance
+* Forca game
+* Score and ranking
+* Light/Dark Theme button?

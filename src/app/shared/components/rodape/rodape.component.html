@@ -2,4 +2,5 @@
 <mat-card *ngIf="usuario.acertou == 0" [ngStyle]="{'color': '#711b23', 'backgroundColor': '#f8d7da'}">
   Errou
   <span class="msg-feedback" *ngIf="mensagem"> {{mensagem}} </span>
+  <span class="msg-feedback" *ngIf="segunda"> tente novamente </span>
 </mat-card>

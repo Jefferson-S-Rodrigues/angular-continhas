@@ -20,7 +20,8 @@ export class AritmeticaComponent implements OnInit {
     uresto: 0,
     uo: -1,
     acertou: -1,
-    porc: 0
+    porc: 0,
+    seg: false
   };
 
   mensagem = "";
@@ -58,6 +59,7 @@ export class AritmeticaComponent implements OnInit {
     }
 
     this.usuario.acertou = acert ? 1 : 0;
+    this.usuario.seg = (!acert) && (!this.usuario.seg); 
 
     if (acert) {
       this.usuario.acertos++;
@@ -69,7 +71,9 @@ export class AritmeticaComponent implements OnInit {
 
     this.contaForm.reset();
 
-    this.proximo();
+    if (!this.usuario.seg) {
+      this.proximo();
+    }
     
   }
 
