@@ -15,6 +15,8 @@ import { ReplacePipe } from './core/pipe/replace.pipe';
 import { AnimaisComponent } from './animais/animais.component';
 import { TopoComponent } from './shared/components/topo/topo.component';
 import { RodapeComponent } from './shared/components/rodape/rodape.component';
+import { TemaComponent } from './shared/components/tema/tema.component';
+import {OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,16 @@ import { RodapeComponent } from './shared/components/rodape/rodape.component';
     ReplacePipe,
     AnimaisComponent,
     TopoComponent,
-    RodapeComponent
+    RodapeComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    OverlayModule
   ],
   providers: [],
   bootstrap: [AppComponent]

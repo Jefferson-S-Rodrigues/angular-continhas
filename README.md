@@ -22,6 +22,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## TODO
 
+* numeric expressions 2
 * Forca game
 * Score and ranking
-* Light/Dark Theme button?
+* Light/Dark Theme button

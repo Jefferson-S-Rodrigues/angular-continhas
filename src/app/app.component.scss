@@ -1,3 +1,6 @@
+
+@import '../themes/extra-theme.scss';
+
 .sidenav-container {
     height: 100%;
   }
@@ -16,3 +19,7 @@
     z-index: 1;
   }
   
+  .breve {
+    font-size: x-small;
+    background-color: mat-color($extra-accent, 300);
+  }

@@ -11,6 +11,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [],
@@ -25,7 +27,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatSlideToggleModule 
   ],
   imports: [
     CommonModule,
@@ -39,7 +43,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatSlideToggleModule 
   ]
 })
 export class MaterialModule { }

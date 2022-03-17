@@ -11,7 +11,6 @@ import { map, shareReplay } from 'rxjs/operators';
 export class AppComponent {
   title = 'Ajuda Continhas';
 
-
   cores = ['primary', 'accent', 'warn'];
   corAritmetica = this.cores[Math.floor(Math.random() * this.cores.length)];
   corExpNum = this.cores[Math.floor(Math.random() * this.cores.length)];
