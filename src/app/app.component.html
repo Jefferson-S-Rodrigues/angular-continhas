@@ -5,10 +5,8 @@
     <mat-nav-list>
       <a mat-list-item routerLink="/aritmetica"><span matBadge="&#215;&#247;" [matBadgeColor]="corAritmetica">Aritmética_</span></a>
       <a mat-list-item routerLink="/expressoes-numericas"><span matBadge="+-&#215;" [matBadgeColor]="corExpNum">Expressões Numéricas</span></a>
-      <a mat-list-item><span matBadge="+-&#215;" [matBadgeColor]="corExpNum">Expressões Numéricas com ()</span><button class="breve" mat-mini-fab>breve</button></a>
-      <a mat-list-item routerLink="/animais"><span>Qual é o Animal?</span></a>
-      <a mat-list-item><span>Jogo da Forca</span> 
-        <button class="breve" mat-mini-fab>breve</button></a>
+      <a mat-list-item routerLink="/animais"><span  matBadge="Aa" [matBadgeColor]="corAnimais">Qual é o Animal?</span></a>
+      <a mat-list-item><span  matBadge="Aa" [matBadgeColor]="corForca">Jogo da Forca</span></a>
       <a mat-list-item><span>-</span></a>
       <a mat-list-item routerLink="/"><span>início</span></a>
     </mat-nav-list>
@@ -21,7 +19,6 @@
       <span [ngStyle]="{'padding-left': '20px'}">{{ title }}</span>
       <!-- <app-tema></app-tema> -->
     </mat-toolbar>
-    <!-- Add Content Here -->
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

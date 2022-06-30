@@ -14,6 +14,8 @@ export class AppComponent {
   cores = ['primary', 'accent', 'warn'];
   corAritmetica = this.cores[Math.floor(Math.random() * this.cores.length)];
   corExpNum = this.cores[Math.floor(Math.random() * this.cores.length)];
+  corForca = this.cores[Math.floor(Math.random() * this.cores.length)];
+  corAnimais = this.cores[Math.floor(Math.random() * this.cores.length)];
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)

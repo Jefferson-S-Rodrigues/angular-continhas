@@ -8,15 +8,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { MaterialModule } from '../material.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { AritmeticaComponent } from './aritmetica/aritmetica.component';
-import { ExprNumComponent } from './expr-num/expr-num.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AritmeticaComponent } from './pages/aritmetica/aritmetica.component';
+import { ExprNumComponent } from './pages/expr-num/expr-num.component';
 import { ReplacePipe } from './core/pipe/replace.pipe';
-import { AnimaisComponent } from './animais/animais.component';
+import { AnimaisComponent } from './pages/animais/animais.component';
 import { TopoComponent } from './shared/components/topo/topo.component';
 import { RodapeComponent } from './shared/components/rodape/rodape.component';
 import { TemaComponent } from './shared/components/tema/tema.component';
 import {OverlayModule } from '@angular/cdk/overlay';
+import { ForcaComponent } from './pages/forca/forca.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {OverlayModule } from '@angular/cdk/overlay';
     AnimaisComponent,
     TopoComponent,
     RodapeComponent,
-    TemaComponent
+    TemaComponent,
+    ForcaComponent
   ],
   imports: [
     BrowserModule,
