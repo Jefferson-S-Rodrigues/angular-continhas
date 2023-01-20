@@ -1,0 +1,25 @@
+.letra-forca {
+    letter-spacing: .3rem;
+    font-size: large;
+    font-weight: 700;
+    padding: 15px 0 15px 0;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.item {
+    margin: 5px;
+    flex-grow: 1;
+}
+
+.fig-forca {
+    flex-shrink: 1;
+}
+
+.palavra {
+    flex-shrink: 3;
+    flex-basis: 80%;
+}
