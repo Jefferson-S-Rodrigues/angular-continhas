@@ -12,7 +12,8 @@ export class ForcaComponent implements OnInit {
 
   forca = [];
   forca_exibir = "";
-  desenho = desenhos[0];
+
+  erros: number = 0;
 
   usuario = {
     acertos: 0,
@@ -33,7 +34,7 @@ export class ForcaComponent implements OnInit {
   }
 
   proximaPalavra() {
-    this.usuario.letradig = [];
+    this.usuario.letradig = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('');
     this.usuario.palavra = palavras[Math.floor(Math.random() * palavras.length)].toUpperCase();
     this.usuario.palavrasa = this.usuario.palavra.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     this.todas = this.usuario.palavrasa.length;
@@ -43,13 +44,20 @@ export class ForcaComponent implements OnInit {
   }
 
   proximaLetra(letra: string) {
+    let l = letra.toUpperCase();
+    this.usuario.letradig =this.usuario.letradig.filter(obj => obj !== l); ;
+    let letra_errada = true;
     for (let i = 0; i < this.usuario.palavrasa.length; i++) {
-      if (this.usuario.palavrasa[i] == letra.toUpperCase() && this.forca[i] == '_') {
+      if (this.usuario.palavrasa[i] == l && this.forca[i] == '_') {
         this.todas--;
         this.forca[i] = this.usuario.palavra[i];
+        letra_errada = false;
       }
     }
     this.forca_exibir = this.forca.join(" ");
+    if (letra_errada) {
+      this.erros++;
+    }
   }
 
   @HostListener('document:keypress', ['$event'])
@@ -66,13 +74,4 @@ const palavras = [
   'Otorrinolaringologista', 'Paralelepípedo', 'Quarentena', 'Reportagem', 'Temperança', 'Fleumático',
   'Verossimilhança', 'Banheiro', 'Cachorro', 'Campeonato', 'Corrupção', 'Galáxia', 'Forca',
   'História', 'Oração', 'Pneumonia', 'Trilogia', 'Xícara', 'Brincadeira', 'Psicologia', 'Universidade'
-];
-
-const desenhos = [
-`
-_____<br>
-|   |<br>
-|<br>
-|
-`
 ];
