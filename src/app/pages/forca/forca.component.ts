@@ -7,7 +7,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class ForcaComponent implements OnInit {
 
-  title = 'Jogo da forca';
+  title = 'Jogo da Forca';
   todas: number = 0;
 
   forca = [];
