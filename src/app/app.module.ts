@@ -18,6 +18,7 @@ import { RodapeComponent } from './shared/components/rodape/rodape.component';
 import { TemaComponent } from './shared/components/tema/tema.component';
 import {OverlayModule } from '@angular/cdk/overlay';
 import { ForcaComponent } from './pages/forca/forca.component';
+import { DesenhoForcaComponent } from './pages/forca/desenho-forca/desenho-forca.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ForcaComponent } from './pages/forca/forca.component';
     TopoComponent,
     RodapeComponent,
     TemaComponent,
-    ForcaComponent
+    ForcaComponent,
+    DesenhoForcaComponent
   ],
   imports: [
     BrowserModule,

@@ -13,7 +13,8 @@ export class DashboardComponent {
   dictcards = [
     { title: 'Aritmética', cols: 1, rows: 1, content: 'Continhas de &#215; e &#247;', link: 'aritmetica' },
     { title: 'Expressões Numéricas', cols: 1, rows: 1, content: 'Continhas de +, - e &#215;', link: 'expressoes-numericas' },
-    { title: 'Animais', cols: 1, rows: 1, content: 'Qual é o animal?', link: 'animais' }
+    { title: 'Animais', cols: 1, rows: 1, content: 'Qual é o animal?', link: 'animais' },
+    { title: 'Jogo da Forca', cols: 1, rows: 1, content: 'Jogo da forca', link: 'forca' }
   ];
 
   constructor(private breakpointObserver: BreakpointObserver) { }
